@@ -6,6 +6,7 @@
 .vscode/
 
 # Tests related
+.coverage
 
 # Logs
 **/logs/**
