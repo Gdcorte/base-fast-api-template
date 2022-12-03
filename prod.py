@@ -1,8 +1,6 @@
 import logging
 import sys
 
-from waitress import serve
-
 from app import prepare_app
 
 
@@ -22,8 +20,5 @@ def configure_root_logger():
     root_log.debug("Starting in debug mode")
 
 
-if __name__ == "__main__":
-    configure_root_logger()
-    app = prepare_app()
-
-    serve(app, host="0.0.0.0", port=5000)
+configure_root_logger()
+app = prepare_app()

@@ -1,7 +1,7 @@
-from flask_restful import Api as FlaskApi
+from fastapi import FastAPI
 
-from healthcheck.api import Api
+from healthcheck.api import healthcheck_router
 
 
-def healthcheck_routes(api: FlaskApi) -> None:
-    api.add_resource(Api, "/healthcheck")
+def healthcheck_routes(app: FastAPI) -> None:
+    app.include_router(healthcheck_router)

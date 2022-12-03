@@ -20,8 +20,5 @@ def configure_root_logger():
     root_log.debug("Starting in debug mode")
 
 
-if __name__ == "__main__":
-    configure_root_logger()
-    app = prepare_app()
-
-    app.run(debug=True, host="0.0.0.0")
+configure_root_logger()
+app = prepare_app()
