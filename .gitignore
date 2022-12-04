@@ -1,0 +1,19 @@
+# Cache
+**/__pycache__/**
+
+# IDE/PC specifics
+.DS_Store
+.vscode/
+
+# Tests related
+.coverage
+
+# Logs
+**/logs/**
+!**/logs/*.md
+
+# Protected
+.env
+
+# Others
+ignore.*

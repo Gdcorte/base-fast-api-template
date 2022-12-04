@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+waitress = "*"
+python-dotenv = "*"
+flask-restful = "*"
+pydantic = "*"
+fastapi = "*"
+uvicorn = "*"
+fastapi-restful = "*"
+httpx = "*"
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+pre-commit = "*"
+black = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+dev = "uvicorn dev:app --reload"
+tests = "./scripts/tests.sh"
+coverage = "./scripts/coverage.sh"
+prod = "uvicorn prod:app"
